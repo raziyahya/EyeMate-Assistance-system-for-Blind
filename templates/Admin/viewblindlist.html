@@ -1,0 +1,41 @@
+{% extends "Admin/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Blind List</h1>
+<br/>
+<table class="table table-striped table-dark" width="200" border="1">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Mobile</th>
+    <th scope="col">Address</th>
+    <th scope="col">Email</th>
+      <th scope="col">Caretaker Name</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i.blind_name }}</td>
+    <td>{{ i.blind_age }}</td>
+    <td>{{ i.blind_gender }}</td>
+    <td>{{ i.blind_mob }}</td>
+    <td>Place:{{ i.blind_place }}<br>Pin:{{ i.blind_pin }}</td>
+    <td>{{ i.blind_email }}</td>
+  <td>{{ i.ct_name }}</td>
+  </tr>
+    {% endfor %}
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
+

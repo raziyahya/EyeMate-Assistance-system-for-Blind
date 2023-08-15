@@ -1,0 +1,72 @@
+{% extends "Caretaker/caretakerindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<br><h1>Add Known Person Details</h1>
+<br/>
+<form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+<table width="356" border="1" class="table table-striped table-dark">
+  <tr>
+    <th width="170" scope="row">Name</th>
+    <td width="170">
+      <label for="textfield"></label>
+      <input class="form-control" type="text" name="textfield" id="textfield" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Age</th>
+    <td>
+      <label for="textfield6"></label>
+      <input class="form-control" type="text" name="textfield6" id="textfield6" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Gender</th>
+    <td>
+      <p>
+        <input type="radio" name="radio" id="radio" value="Male" />
+        <label for="radio"></label>
+        Male</p>
+        <input type="radio" name="radio" id="radio" value="Female" />
+    <label for="radio"></label>
+        Female</p>
+        </td>
+  </tr>
+  <tr>
+    <th scope="row">Mobile</th>
+    <td>
+      <label for="textfield2"></label>
+      <input class="form-control" type="text" name="textfield2" id="textfield2" />
+   </td>
+  </tr>
+  <tr>
+    <th scope="row">Address</th>
+    <td>
+      <label for="textfield3"></label>
+      <input class="form-control" type="text" name="textfield3" id="textfield3" />
+   </td>
+  </tr>
+    <tr>
+    <th scope="row">Image</th>
+    <td>
+      <label for="filefield"></label>
+      <input class="form-control" type="file" name="filefield" id="filefield" />
+   </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2" scope="row">
+      <input style="padding-left:20px;padding-right:20px;" type="submit" name="button" id="button" value="Add" align="center"/>
+   </td>
+  </tr>
+</table>
+     </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

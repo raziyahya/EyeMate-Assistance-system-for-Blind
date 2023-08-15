@@ -1,0 +1,31 @@
+{% extends "Admin/adminindex.html" %}
+{% block body %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><table width="200" border="1">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Caretaker name</th>
+    <th scope="col">Review</th>
+    <th scope="col">Rating</th>
+    <th scope="col">Date</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i.ct_name }}</td>
+    <td>{{ i.review }}</td>
+    <td>{{ i.rating }}</td>
+    <td>{{ i.review_date }}</td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}
+

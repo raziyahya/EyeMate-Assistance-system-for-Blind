@@ -1,0 +1,45 @@
+{% extends "Caretaker/caretakerindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<b><h1>View Known Person Details</h1></b>
+<form id="form1" name="form1" method="get" action="">
+<table width="200" border="1" class="table table-striped table-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Mobile</th>
+    <th scope="col">Address</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td><img src="{{ i.kp_image }}" alt="No photo" height="100" width="100" class="rounded-circle"/><br/>{{ i.kp_name }}</td>
+    <td>{{ i.kp_age }}</td>
+    <td>{{ i.kp_gender }}</td>
+    <td>{{ i.kp_mobile }}</td>
+    <td>Place:{{ i.kp_address }}</td>
+
+
+    <td>
+<p><a href="/update_kp/{{ i.kp_id }}#abc" style="color:#33FF00">Update</a>
+      </p>
+      <p><a href="/delete_kp/{{ i.kp_id }}" style="color:#FF4500">Delete</a></p>
+    </td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}
